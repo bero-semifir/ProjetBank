@@ -26,8 +26,8 @@ public class CompeASeuilRemunere extends CompteRemunere implements ICompteASeuil
 
     /**
      * Retire un montant du solde du compte. Si le seuil est dépassé une exception est levée
-     * @param unMontant
-     * @throws banque.BanqueException
+     * @param unMontant montant à retirer
+     * @throws banque.BanqueException Si le seuil est dépassé
      */
     @Override
     public void retirer(double unMontant) throws BanqueException{

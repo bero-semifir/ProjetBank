@@ -15,13 +15,6 @@ import java.util.Map;
 public class ClientRepository {
 
     /**
-     * Lance la connexion à la base de données
-     */
-    public void seConnecter(){
-
-    }
-
-    /**
      * Récupère la liste des clients en base de données
      * @return la liste des clients
      */
@@ -32,7 +25,7 @@ public class ClientRepository {
         try (
                 Connection connection = SQLConnector.seConnecter();
                 Statement statement = connection.createStatement();
-                ResultSet resultat = statement.executeQuery("select id, nom, prenom, dateDeNaissance from utilisateur");
+                ResultSet resultat = statement.executeQuery("select id, nom, prenom, dateDeNaissance from utilisateur")
         ) {
             while (resultat.next()) {
                 // ** mapping ORM **
@@ -105,8 +98,6 @@ public class ClientRepository {
                 while (resultat.next()){
                     int numero = resultat.getInt("id");
                     double solde = resultat.getDouble("solde");
-                    // double taux = resultat.getDouble("taux");
-                    // double seuil = resultat.getDouble("seuil");
 
                     Compte compte = new Compte(numero, solde);
                     comptes.add(compte);

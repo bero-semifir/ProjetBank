@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Compte {
     private double solde;
-    private int numero;
+    private final int numero;
 
     public Compte(int numero) {
         this(numero, 0);
@@ -29,7 +29,7 @@ public class Compte {
 
     /**
      * Ajoute un montant du solde du compte
-     * @param unMontant
+     * @param unMontant montant à ajouter
      */
     public void ajouter(double unMontant){
         this.solde += unMontant;
@@ -37,7 +37,7 @@ public class Compte {
 
     /**
      * Retire un montant du solde du compte
-     * @param unMontant
+     * @param unMontant montant à retirer
      */
     public void retirer(double unMontant) throws BanqueException{
         this.ajouter(-unMontant);

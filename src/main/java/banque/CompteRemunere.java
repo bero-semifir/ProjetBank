@@ -29,8 +29,7 @@ public class CompteRemunere extends Compte implements ICompteRemunere {
      * @return interets: le montant des interêts
      */
     public double calculerInterets(){
-        double interets = this.getSolde() * this.getTaux();
-        return interets;
+        return this.getSolde() * this.getTaux();
     }
 
     /**

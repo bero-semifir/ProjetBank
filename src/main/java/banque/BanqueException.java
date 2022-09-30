@@ -4,7 +4,7 @@ import java.security.PrivilegedActionException;
 
 public class BanqueException extends Exception{
 
-    private long serialVersionUID= 1L;
+    private final long serialVersionUID= 1L;
 
     /**
      * Constructs a new exception with {@code null} as its detail message.

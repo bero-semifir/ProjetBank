@@ -1,10 +1,5 @@
 import banque.Client;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.*;
-import java.util.Arrays;
 
 public class Demo {
     public static void main(String[] args){
@@ -28,7 +23,7 @@ public class Demo {
         try (
                 Connection connection = DriverManager.getConnection(dbUrl, dbLogin, dbPwd);
                 Statement statement = connection.createStatement();
-                ResultSet resultat = statement.executeQuery("select * from utilisateur");
+                ResultSet resultat = statement.executeQuery("select * from utilisateur")
         ) {
             while (resultat.next()) {
                 int numero = resultat.getInt("id");

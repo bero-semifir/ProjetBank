@@ -3,7 +3,7 @@ package banque;
 import java.util.*;
 
 public class Client {
-    private int numero;
+    private final int numero;
     private String nom;
     private String prenom;
     private int age;
@@ -81,7 +81,7 @@ public class Client {
 
     /**
      * Ajoute un compte au Client
-     * @throws banque.BanqueException
+     * @throws banque.BanqueException En cas de dépassement du nombre maximum de compte
      * @param unCompte le compte à ajouter au client
      */
     public void ajouterCompte(Compte unCompte) throws BanqueException{

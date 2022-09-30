@@ -29,7 +29,7 @@ public class CompteASeuil extends Compte implements ICompteASeuil {
      * Si le montant retiré faire descendre le solde sous le seuil, le retrait est annulé
      * @param unMontant le montant à retirer
      * @see banque.Compte
-     * @throws banque.BanqueException
+     * @throws banque.BanqueException Si le montant dépasse le seuil
      */
     @Override
     public void retirer(double unMontant) throws BanqueException{
